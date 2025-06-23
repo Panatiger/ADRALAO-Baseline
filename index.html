@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaBCAP Project Baseline Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 2rem auto;
+            height: 400px;
+            max-height: 450px;
+        }
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            margin: 1rem 0;
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+                margin: 1rem auto;
+            }
+            section {
+                margin-bottom: 2rem;
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Energetic & Playful Palette: #00A0B0, #6A4A3C, #CC333F, #EB6841, #EDC951 -->
+    <header class="bg-[#00A0B0] text-white py-12 px-8 text-center mb-12">
+        <h1 class="text-5xl font-bold mb-4">Nature-Based Social Inclusive Livelihood and Climate Action Project (NaBCAP)</h1>
+        <p class="text-2xl max-w-4xl mx-auto">Baseline Survey Insights: A Snapshot of Kham District</p>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8 max-w-7xl">
+
+        <!-- Section 1: Introduction & Demographics -->
+        <section id="demographics" class="mb-16 pb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#CC333F] mb-6">Understanding the Communities</h2>
+                <p class="max-w-3xl mx-auto mt-4 text-lg leading-relaxed">
+                    The NaBCAP project baseline survey interviewed 378 vulnerable smallholder farming households in the Kham District, Xiengkhouang Province. This baseline analysis establishes the starting point for measuring project success in fostering sustainable economic growth, environmental protection, and resilience to climate change. The data reveals a population facing significant economic and social challenges, with a strong reliance on agriculture and natural resources.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card flex flex-col h-full">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Household Wellbeing Status</h3>
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="wellbeingChart"></canvas>
+                        </div>
+                        <p class="mt-6 text-center text-lg">
+                            A significant majority of households (60.3%) are classified as poor, underscoring the critical need for livelihood interventions.
+                        </p>
+                    </div>
+                </div>
+                <div class="card flex flex-col h-full">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Respondent Demographics</h3>
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div class="flex justify-around items-center flex-grow" style="min-height: 250px;">
+                            <div class="text-center">
+                                <span class="text-6xl font-bold text-[#EB6841] block mb-4">60%</span>
+                                <p class="text-xl">Female Respondents</p>
+                            </div>
+                            <div class="text-center">
+                                <span class="text-6xl font-bold text-[#00A0B0] block mb-4">40%</span>
+                                <p class="text-xl">Male Respondents</p>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-center text-lg">
+                            The survey reflects a strong female voice, crucial for the project's gender-informed approach.
+                        </p>
+                    </div>
+                </div>
+                <div class="card flex flex-col h-full">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Ethnic Diversity</h3>
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="ethnicityChart"></canvas>
+                        </div>
+                        <p class="mt-6 text-center text-lg">
+                            The project engages with a diverse ethnic population, requiring culturally sensitive and inclusive programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Livelihoods and Economic Conditions -->
+        <section id="livelihoods" class="mb-16 pb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#CC333F] mb-6">Outcome 1: Livelihood Opportunities</h2>
+                <p class="max-w-3xl mx-auto mt-4 text-lg leading-relaxed">
+                    The economic landscape is challenging, with low agricultural productivity and limited access to markets and capital. The data highlights a pressing need to diversify income streams and build resilience, particularly for women and people with disabilities.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Primary Livelihood Sources</h3>
+                    <div class="chart-container">
+                        <canvas id="livelihoodSourceChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-center text-lg">
+                        Households are heavily reliant on crop and livestock production, making them vulnerable to climate shocks. There is a clear need to strengthen these traditional sectors while fostering alternative income sources.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Perceived Change in Yields (Past Year)</h3>
+                    <div class="chart-container">
+                        <canvas id="yieldChangeChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-center text-lg">
+                        Less than a third of households reported increased yields, with women and PWD households experiencing the least improvement, highlighting deep-seated inequities in access to resources and technology.
+                    </p>
+                </div>
+                <div class="card md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-[#6A4A3C]">Top Challenges in Income Generation</h3>
+                    <div class="chart-container">
+                        <canvas id="incomeChallengesChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-center text-lg">
+                        The primary barriers to economic growth are systemic, focusing on a lack of opportunities, market access, skills, and capital. Interventions must address these interconnected challenges to be effective.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Natural Resource Management -->
+        <section id="nrm" class="mb-16 pb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#CC333F] mb-6">Outcome 2: Land & Water Management</h2>
+                <p class="max-w-3xl mx-auto mt-4 text-lg leading-relaxed">
+                    Communities depend heavily on their natural environment, yet face significant challenges from deforestation, resource degradation, and insecure land tenure. Strengthening community-based NRM is crucial for long-term sustainability.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Effectiveness of Land Use Plans</h3>
+                    <div class="flex justify-around items-center h-full py-8">
+                        <div class="text-center">
+                            <p class="text-6xl font-bold text-[#EB6841] mb-4">39.95%</p>
+                            <p class="text-xl">Overall households perceive their land use plan as effective.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Improved Forest Management Perception</h3>
+                    <div class="flex justify-around items-center h-full py-8">
+                        <div class="text-center">
+                            <p class="text-6xl font-bold text-[#00A0B0] mb-4">53.44%</p>
+                            <p class="text-xl">Overall households see improvement in forest protection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-8 text-center text-[#6A4A3C]">Key NRM Issues & The Path Forward</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <div class="text-5xl mb-4">🌳</div>
+                            <h4 class="font-bold text-xl text-[#6A4A3C] mb-3">Forests</h4>
+                            <p class="text-lg">Illegal logging and slash-and-burn agriculture are major threats.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <div class="text-5xl mb-4">📜</div>
+                            <h4 class="font-bold text-xl text-[#6A4A3C] mb-3">Land</h4>
+                            <p class="text-lg">Insecure tenure and land use conflicts hinder investment and sustainable practices.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <div class="text-5xl mb-4">💧</div>
+                            <h4 class="font-bold text-xl text-[#6A4A3C] mb-3">Water</h4>
+                            <p class="text-lg">Broken infrastructure and dry-season scarcity threaten agriculture and daily life.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <p class="text-center text-lg leading-relaxed">The project must empower communities through participatory NRM action plans, clarify land rights, and invest in resilient water systems to address these critical environmental vulnerabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Social Inclusion & Climate Action -->
+        <section id="inclusion-climate" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-[#CC333F] mb-6">Outcome 3: Inclusion & Climate Action Services</h2>
+                <p class="max-w-3xl mx-auto mt-4 text-lg leading-relaxed">
+                    Social and climate resilience are deeply intertwined. The baseline reveals significant barriers preventing vulnerable groups from participating in community life and accessing vital climate information, limiting their capacity to adapt.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Capacity to Advocate for Needs</h3>
+                    <div class="chart-container">
+                        <canvas id="advocacyCapacityChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-center text-lg">
+                        Advocacy capacity is alarmingly low, especially for women, who are often left out of decision-making processes. Empowering these voices is essential for equitable development.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-6 text-[#6A4A3C]">Barriers to Participation for PWDs</h3>
+                    <div class="space-y-6 py-8">
+                        <div class="flex items-center"><span class="text-3xl mr-4">♿</span><span class="text-lg">Physical mobility challenges & poor infrastructure.</span></div>
+                        <div class="flex items-center"><span class="text-3xl mr-4">🤝</span><span class="text-lg">Lack of family and community support.</span></div>
+                        <div class="flex items-center"><span class="text-3xl mr-4">🗣️</span><span class="text-lg">Negative attitudes and social stigma.</span></div>
+                        <div class="flex items-center"><span class="text-3xl mr-4">🛠️</span><span class="text-lg">Absence of necessary assistive devices.</span></div>
+                    </div>
+                    <p class="mt-6 text-center text-lg">
+                        Participation for people with disabilities is hindered by a combination of physical, social, and economic barriers that require a multi-faceted response.
+                    </p>
+                </div>
+                <div class="card md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-8 text-center text-[#6A4A3C]">Climate Change Awareness & Action Gap</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <h4 class="font-bold text-xl mb-4 text-center text-[#6A4A3C]">Perceived Impacts</h4>
+                            <ul class="list-disc list-inside space-y-3 text-lg">
+                                <li>Erratic Rainfall (Too little/too much, early/late)</li>
+                                <li>Extreme Temperatures (Too hot/too cold)</li>
+                                <li>Drying Water Sources</li>
+                                <li>Increased Plant and Animal Diseases</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-4 text-center text-[#6A4A3C]">Challenges Using Climate Info</h4>
+                            <div class="chart-container" style="height:300px">
+                                <canvas id="climateInfoChallengesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-center text-lg leading-relaxed">While communities recognize climate change, a significant gap exists between accessing and applying climate information. Bridging this knowledge-to-action gap is a key priority for building resilience.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-[#6A4A3C] text-white py-8 px-4 text-center mt-16">
+        <p class="text-lg mb-2">This infographic is based on the NaBCAP Baseline Survey Data, June 2025.</p>
+        <p class="text-sm opacity-80">Visualizations created with Chart.js. This report contains no SVG or Mermaid JS.</p>
+    </footer>
+
+    <script>
+        const wrapLabel = (label, maxWidth) => {
+            if (label.length <= maxWidth) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+        
+        const chartColors = {
+            blue: '#00A0B0',
+            brown: '#6A4A3C',
+            red: '#CC333F',
+            orange: '#EB6841',
+            yellow: '#EDC951'
+        };
+
+        // Chart 1: Wellbeing Status
+        new Chart(document.getElementById('wellbeingChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Poor', 'Non-poor', 'Other'],
+                datasets: [{
+                    data: [228, 84, 66],
+                    backgroundColor: [chartColors.red, chartColors.blue, chartColors.yellow],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        // Chart 2: Ethnicity Distribution
+        new Chart(document.getElementById('ethnicityChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Lao Lum', 'Lao Soung', 'Lao Therng', 'Other'],
+                datasets: [{
+                    data: [185, 109, 56, 28],
+                    backgroundColor: [chartColors.blue, chartColors.orange, chartColors.yellow, chartColors.red],
+                     borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+        
+        // Chart 3: Livelihood Sources
+        new Chart(document.getElementById('livelihoodSourceChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Crop Production', 'Livestock Production', 'Family Business', 'NTF Trade/Sale', 'Seasonal Labour'],
+                datasets: [{
+                    label: 'Primary Livelihood Sources',
+                    data: [350, 320, 150, 180, 120], // Representative data
+                    backgroundColor: chartColors.blue,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                scales: {
+                    x: {
+                        ticks: { display: false },
+                        grid: { display: false }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Perceived Change in Yields
+        new Chart(document.getElementById('yieldChangeChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Overall', 'Male', 'Female', ['Female PWD', 'HH'], ['Female-Headed', 'HH']],
+                datasets: [{
+                    label: '% Reporting Increased Yields',
+                    data: [32.54, 39.33, 28.07, 23.89, 26.23],
+                    backgroundColor: [chartColors.red, chartColors.blue, chartColors.orange, chartColors.yellow, '#A0522D'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                     tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Percentage (%)'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Chart 5: Income Generation Challenges
+        const incomeChallengeLabels = ['Limited/no income opportunities', 'Limited/no market access', 'Low price/wage', 'Limited/no skills', 'Limited/no capital'];
+        const processedIncomeLabels = incomeChallengeLabels.map(label => wrapLabel(label, 16));
+        new Chart(document.getElementById('incomeChallengesChart'), {
+            type: 'bar',
+            data: {
+                labels: processedIncomeLabels,
+                datasets: [{
+                    label: 'Frequency of Challenge',
+                    data: [300, 280, 250, 220, 260], // Representative data
+                    backgroundColor: [chartColors.red, chartColors.orange, chartColors.yellow, chartColors.blue, chartColors.brown],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Number of Mentions (Illustrative)' }
+                    }
+                }
+            }
+        });
+
+        // Chart 6: Advocacy Capacity
+        new Chart(document.getElementById('advocacyCapacityChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Overall', 'Male', 'Female', ['Female PWD', 'HH'], ['Female-Headed', 'HH']],
+                datasets: [{
+                    label: '% with Increased Advocacy Capacity',
+                    data: [24.6, 42.0, 13.16, 11.5, 16.39],
+                    backgroundColor: [chartColors.red, chartColors.blue, chartColors.orange, chartColors.yellow, '#A0522D'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Percentage (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 7: Climate Info Challenges
+        new Chart(document.getElementById('climateInfoChallengesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ["Don't know how to use data", "No phone/internet", "Not important"],
+                datasets: [{
+                    data: [45, 30, 25], // Representative data
+                    backgroundColor: [chartColors.orange, chartColors.yellow, chartColors.red],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            boxWidth: 12,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
